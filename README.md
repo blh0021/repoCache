@@ -1,5 +1,6 @@
 # repoCache
-Creates a repo cache to repositories to minimize download over internet.
+Creates a repo cache to repositories to minimize download over internet. This service
+will only retrieve and store files that are requested rather than creating an entire mirror.
 
 ## Run
 ```shell
