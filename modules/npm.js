@@ -3,6 +3,7 @@ var cwd = process.cwd();
 var fe = require('file-exists');
 var mkdirp = require('mkdirp');
 var helpers = require('../helpers');
+var config = require('../config.json');
 
 mkdirp('./repo/npm', function (err) {
     if (err) console.error(err)
@@ -13,7 +14,7 @@ module.exports = function (app) {
     function npmJsonPackage(req, res) {
         var fileName = cwd + "/repo/npm/" + req.params.package + ".json"; //path;
         var data = fs.readFileSync(fileName, 'utf8');
-        data = data.replace("https://registry.npmjs.org/", "http://localhost:3000/repo/npm/")
+        data = data.replace("https://registry.npmjs.org/", config.npm.hostname + "/repo/npm/")
         res.json(JSON.parse(data));
     }
 
