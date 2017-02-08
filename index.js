@@ -16,6 +16,7 @@ app.all('/*', (req, res, next) => {
 
 require('./modules/npm')(app);
 require('./modules/ubuntu')(app);
+require('./modules/rubygems')(app);
 
 app.get('/', function (req, res) {
     res.send('Simple OSS proxy repo!')

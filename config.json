@@ -4,5 +4,8 @@
     },
     "ubuntu": {
         "hostname": "http://us.archive.ubuntu.com/ubuntu/"
+    },
+    "rubygems": {
+        "hostname": "https://rubygems.org/"
     }
 }
