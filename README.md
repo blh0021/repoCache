@@ -9,4 +9,4 @@ node index.js
 ## NPM setup
 ```
 npm config set registry=http://localhost:3000/repo/npm
-``
+```
