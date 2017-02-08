@@ -8,5 +8,20 @@ node index.js
 
 ## NPM setup
 ```
-npm config set registry=http://localhost:3000/repo/npm
+npm config set registry=http://hostname:3000/repo/npm
+```
+
+
+## Ubuntu /etc/apt/sources.list
+Put these lines at the top of the sources.list file.
+```
+deb http://hostname:3000/repo/ubuntu yakkety main restricted
+deb http://hostname:3000/repo/ubuntu yakkety-updates main restricted
+deb http://hostname:3000/repo/ubuntu yakkety-security main restricted
+deb http://hostname:3000/repo/ubuntu yakkety universe
+deb http://hostname:3000/repo/ubuntu yakkety-updates universe
+deb http://hostname:3000/repo/ubuntu yakkety-security universe
+deb http://hostname:3000/repo/ubuntu yakkety multiverse
+deb http://hostname:3000/repo/ubuntu yakkety-updates multiverse
+deb http://hostname:3000/repo/ubuntu yakkety-security multiverse
 ```
