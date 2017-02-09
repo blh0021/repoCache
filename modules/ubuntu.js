@@ -21,11 +21,7 @@ module.exports = function (app) {
         })
         var url = config.ubuntu.hostname + pkg;
         var fn = "./repo/ubuntu/" + pkg;
-        /*
-        console.log(url);
-        console.log(fn);
-        console.log(pkg);
-        */
+
         if (!fe.sync(fn)) {
             try {
                 helpers.download(url, fn, helpers.sendFile.bind(null, fn, res));

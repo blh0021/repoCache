@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jasmine"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +13,8 @@
     "file-exists": "^3.0.1",
     "mkdirp": "^0.5.1",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3"
   }
 }
