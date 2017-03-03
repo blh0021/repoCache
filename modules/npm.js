@@ -21,11 +21,13 @@ module.exports = function (app) {
         var fileName = cwd + fn.replace(".", ""); //path;
         console.log(fileName);
         var data = fs.readFileSync(fileName, 'utf8');
-        data = data.replaceAll("https://registry.npmjs.org/", config.npm.hostname + "/repo/npm/")
+        //data = data.replaceAll("https://registry.npmjs.org/", config.npm.hostname + "/repo/npm/")
         var jsn = JSON.parse(data);
+        /*
         _.each(jsn.versions, (ver) => {
             delete ver._npmOperationalInternal;
         });
+        */
         res.json(jsn);
     }
 
