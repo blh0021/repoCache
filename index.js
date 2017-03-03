@@ -7,6 +7,7 @@ var http = require('http');
 var https = require('https');
 var tls = require('tls');
 var fs = require('fs');
+require('./modules/socket')();
 
 var secureContext = {
     'localhost': tls.createSecureContext({
@@ -73,13 +74,8 @@ require('./modules/root')(app);
 require('./modules/npm')(app);
 
 
-/*app.get('/', (req, res) => {
-    let url = req.originalUrl;
-    res.send(url)
-});
-*/
-//console.log(keys);
-//https.createServer({ key: keys.serviceKey, cert: keys.certificate }, app).listen(3001);
 https.createServer(options, app).listen(3001);
 http.createServer(app).listen(3000);
-//});
+
+console.log('HTTP listening on 3000');
+console.log('HTTPS listening on 3001');
